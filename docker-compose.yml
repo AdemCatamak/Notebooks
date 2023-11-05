@@ -1,0 +1,45 @@
+version: "3.4"
+
+services:
+
+  notebooks-api:
+    image: notebooks-api:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - test-azure-blob
+      - notebooks-sql-server
+    links:
+      - test-azure-blob
+      - notebooks-sql-server
+    environment:
+      - AzureBlobServiceConfig:BaseUrl=http://test-azure-blob:10000/devstoreaccount1/test-notebooks-container
+      - AzureBlobServiceConfig:AccountName=devstoreaccount1
+      - AzureBlobServiceConfig:Password=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
+      - ConnectionStrings:NotebooksDbSqlServer=Server=notebooks-sql-server,1433;User=sa;Password=Passw0rd;TrustServerCertificate=True
+  
+  
+  test-azure-blob:
+    container_name: test-azure-blob
+    image: mcr.microsoft.com/azure-storage/azurite:3.27.0
+    expose:
+      - 10000
+      - 10001
+      - 10002
+    ports:
+      - "10000:10000"
+      - "10001:10001"
+      - "10002:10002"
+
+  notebooks-sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Passw0rd"
+    expose:
+      - 1433
+    ports:
+      - "1433:1433"

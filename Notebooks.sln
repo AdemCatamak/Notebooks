@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C5BB133E-3670-4C12-989B-A59EBFCB10EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A9318B64-AD10-412C-B80F-61A148A34457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebooks.Api", "src\Notebooks.Api\Notebooks.Api.csproj", "{EE4455C3-3F24-48E6-A7D4-9E1E0789697E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebooks.Domain", "src\Notebooks.Domain\Notebooks.Domain.csproj", "{380DE7D8-92F5-4236-9BFB-9833E01EB82F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebooks.Infra", "src\Notebooks.Infra\Notebooks.Infra.csproj", "{AAF4F867-2F60-484B-BFB5-83A2AFAD1B5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{13D6DC57-5A67-4498-B9C8-57F9349DA5B1}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebooks.Application", "src\Notebooks.Application\Notebooks.Application.csproj", "{D905B919-F4AF-4351-A8D1-A649BA90ABB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebooks.IntegrationTest", "tests\Notebooks.IntegrationTest\Notebooks.IntegrationTest.csproj", "{97FFAA0B-DF6F-455A-A471-583A44D2678B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE4455C3-3F24-48E6-A7D4-9E1E0789697E} = {C5BB133E-3670-4C12-989B-A59EBFCB10EE}
+		{380DE7D8-92F5-4236-9BFB-9833E01EB82F} = {C5BB133E-3670-4C12-989B-A59EBFCB10EE}
+		{AAF4F867-2F60-484B-BFB5-83A2AFAD1B5B} = {C5BB133E-3670-4C12-989B-A59EBFCB10EE}
+		{D905B919-F4AF-4351-A8D1-A649BA90ABB5} = {C5BB133E-3670-4C12-989B-A59EBFCB10EE}
+		{97FFAA0B-DF6F-455A-A471-583A44D2678B} = {A9318B64-AD10-412C-B80F-61A148A34457}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE4455C3-3F24-48E6-A7D4-9E1E0789697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4455C3-3F24-48E6-A7D4-9E1E0789697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4455C3-3F24-48E6-A7D4-9E1E0789697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4455C3-3F24-48E6-A7D4-9E1E0789697E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380DE7D8-92F5-4236-9BFB-9833E01EB82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380DE7D8-92F5-4236-9BFB-9833E01EB82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380DE7D8-92F5-4236-9BFB-9833E01EB82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380DE7D8-92F5-4236-9BFB-9833E01EB82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF4F867-2F60-484B-BFB5-83A2AFAD1B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF4F867-2F60-484B-BFB5-83A2AFAD1B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF4F867-2F60-484B-BFB5-83A2AFAD1B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF4F867-2F60-484B-BFB5-83A2AFAD1B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D905B919-F4AF-4351-A8D1-A649BA90ABB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D905B919-F4AF-4351-A8D1-A649BA90ABB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D905B919-F4AF-4351-A8D1-A649BA90ABB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D905B919-F4AF-4351-A8D1-A649BA90ABB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97FFAA0B-DF6F-455A-A471-583A44D2678B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FFAA0B-DF6F-455A-A471-583A44D2678B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FFAA0B-DF6F-455A-A471-583A44D2678B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FFAA0B-DF6F-455A-A471-583A44D2678B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
