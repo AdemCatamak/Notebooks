@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Notebooks.Domain;
 using Notebooks.Domain.Db.Repositories;
 using Notebooks.Domain.Exceptions;

@@ -16,7 +16,7 @@ services:
       - test-azure-blob
       - notebooks-sql-server
     environment:
-      - AzureBlobServiceConfig:BaseUrl=http://test-azure-blob:10000/devstoreaccount1/test-notebooks-container
+      - AzureBlobServiceConfig:BaseUrl=http://test-azure-blob:10000/devstoreaccount1
       - AzureBlobServiceConfig:AccountName=devstoreaccount1
       - AzureBlobServiceConfig:Password=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==
       - ConnectionStrings:NotebooksDbSqlServer=Server=notebooks-sql-server,1433;User=sa;Password=Passw0rd;TrustServerCertificate=True

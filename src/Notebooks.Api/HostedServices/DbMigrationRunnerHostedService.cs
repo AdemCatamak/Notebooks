@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using Notebooks.Domain.Db;
+﻿using Notebooks.Domain.Db;
 
 namespace Notebooks.Api.HostedServices;
 

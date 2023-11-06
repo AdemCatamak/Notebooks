@@ -1,4 +1,5 @@
 using Notebooks.Api.HostedServices;
+using Notebooks.Api.Middleware;
 using Notebooks.Infra;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ services.AddSwaggerGen();
 CompositionRoot.Register(services, configuration);
 
 WebApplication app = builder.Build();
+
+app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 app.UseSwagger();
 app.UseSwaggerUI();
